@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     ifstream file;
     file.open (argv[1]);
     if (!file) {
-        cout << "The file " << argv[1] << " input-file-path* could not be opened.";
+        cout << "The file " << argv[1] << " could not be opened.";
         return 1;
     }
 
