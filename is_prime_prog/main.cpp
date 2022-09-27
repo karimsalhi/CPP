@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int is_prime(int n) 
+long long int is_prime(long long int n) 
 {
   bool is_prime = true;
 
@@ -12,7 +12,7 @@ int is_prime(int n)
     return 0;
   }
 
-  for (int i = 2; i <= n/2; ++i) {
+  for (long long int i = 2; i <= n/2; ++i) {
     if (n % i == 0) {
         cout << n << " is a prime: False\n";
         return 0;
@@ -25,7 +25,7 @@ int is_prime(int n)
 
 int main(int argc, char *argv[])
 {
-    int i;
+    long long int i;
     while (cin >> i) {
         is_prime(i);
     }

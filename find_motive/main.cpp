@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -17,7 +16,7 @@ int main(int argc, char *argv[])
     string word;
     while (file >> word) {
         int i = 0;
-        if (word.find(argv[2])) {
+        if (word.find(argv[2]) != std::string::npos) {
             occ++;
         }
     }
