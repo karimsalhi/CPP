@@ -1,6 +1,9 @@
 #pragma once
 
 #include <ostream>
+#include <initializer_list>
+#include <cassert>
+#include <memory>
 
 #include "config.h"
 
@@ -8,13 +11,13 @@ class Vector
 {
 public:
 // DO NOT CHANGE THIS
-    Vector(const Vector&) = default;
-    Vector& operator=(const Vector&) = default;
+    Vector(const Vector&);
+    Vector& operator=(const Vector&);
     ~Vector() = default;
 //
 
 // Add suitable constructors
-    Vector();
+    Vector(size_t N);
     Vector(std::initializer_list<value> l);
 
     size_t size() const;
@@ -36,8 +39,8 @@ public:
 
 private:
 // Private Member functions here (if necessary)
-    value data[NDIM];
     size_t vector_size;
+    std::unique_ptr<value[]>data;
 // Member variables are ALWAYS private, and they go here
 };
 
